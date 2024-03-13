@@ -1,5 +1,6 @@
+import { useState } from 'react';
+import { Button } from '../Button/Button';
 import './Person.css';
-
 
 type Props = {
   name: string;
@@ -19,6 +20,7 @@ function findContrastColor(color: string) {
 }
 
 export function Person(props: Props) {
+  const [age, setAge] = useState<number>(props.age ?? 0)
   const style: Record<string, string> = {}
 
   if (props.favoriteColor) {
@@ -28,10 +30,27 @@ export function Person(props: Props) {
     style['color'] = color
   }
 
+  const onDecrement = () => {
+    console.log('decrement', props)
+    setAge(age - 1)
+  }
+
+  const onIncrement = () => {
+    console.log('increment', props)
+    setAge(age + 1)
+  }
+
   return (
     <section className="person" style={style}>
       <h2>{props.name}</h2>
-      {props.age && <p>Age: {props.age}</p>}
+      {age > 0 && (
+        <>
+          <Button onClick={onDecrement}>-</Button>
+          <p>Age: {age}</p>
+          <Button onClick={onIncrement}>+</Button>
+        </>
+      )}
+
     </section>
   )
 }
