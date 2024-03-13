@@ -1,28 +1,25 @@
+import { Routes, Route } from "react-router-dom";
+
 import './App.css';
-import { Person } from './components/person/Person';
-import { Container } from './components/Container/Container';
+import { NotFound } from "./pages/NotFound";
+import { Home } from "./pages/Home";
+import { Layout } from "./components/Layout/Layout";
+import { Experiment } from "./pages/Experiment";
+import { Teams } from "./pages/Teams";
+import { Team } from "./pages/Team";
 
 function App() {
   return (
     <div className="App">
-      <p>app</p>
-      <Container>
-        <Container>
-          <Person name="Óli" favoriteColor="#ff00ff" age={40.2} />
-          <Person name="Foo" age={100} />
-          <Person name="Bar" favoriteColor="#000000" />
-          <Person name="Jóna" favoriteColor="#ff04329" />
-          <Person name="Bar" favoriteColor="#000000" />
-        </Container>
-
-        <Container>
-          <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
-        </Container>
-      </Container>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="teams" element={<Teams />} />
+          <Route path="teams/:id" element={<Team  />} />
+          <Route path="experiment" element={<Experiment />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
