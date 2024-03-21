@@ -14,8 +14,8 @@ export function Teams() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch('http://localhost:4000/teams');
-
-      // await sleep(4000)
+      
+      // Engin localhost:4000/teams hjá mer með liði. 
       
       const teamsJson = await response.json();
 
@@ -35,6 +35,9 @@ export function Teams() {
           )
         })}
       </ul>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
     </div>
   );
 }

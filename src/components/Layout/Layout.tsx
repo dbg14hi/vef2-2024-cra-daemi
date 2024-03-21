@@ -14,7 +14,7 @@ export function Layout() {
             <Link to="/teams">Teams</Link>
           </li>
           <li>
-            <Link to="/experiment">Crazy Experiment!</Link>
+            <Link to="/Leikir">Leikir</Link>
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>

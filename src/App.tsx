@@ -5,6 +5,8 @@ import { NotFound } from "./pages/NotFound";
 import { Home } from "./pages/Home";
 import { Layout } from "./components/Layout/Layout";
 import { Experiment } from "./pages/Experiment";
+import { Leikir } from "./pages/Leikir";
+import { Leik } from "./pages/Leik";
 import { Teams } from "./pages/Teams";
 import { Team } from "./pages/Team";
 
@@ -16,6 +18,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="teams" element={<Teams />} />
           <Route path="teams/:id" element={<Team  />} />
+          <Route path="leikir" element={<Leikir  />} />
+          <Route path="leik/:id" element={<Leik  />} />
           <Route path="experiment" element={<Experiment />} />
           <Route path="*" element={<NotFound />} />
         </Route>

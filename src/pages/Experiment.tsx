@@ -1,5 +1,6 @@
 import { Container } from "../components/Container/Container";
 import { Person } from "../components/person/Person";
+import { Link } from "react-router-dom";
 
 export function Experiment() {
   return (
@@ -17,12 +18,11 @@ export function Experiment() {
 
         <Container>
           <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
-          <div>asdf</div>
         </Container>
       </Container>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
     </div>
   );
 }
