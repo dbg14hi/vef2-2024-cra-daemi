@@ -36,6 +36,9 @@ export function Teams() {
         })}
       </ul>
       <p>
+        <Link to="/createTeam">Create New Team</Link> {/* Added create team link */}
+      </p>
+      <p>
         <Link to="/">Go to the home page</Link>
       </p>
     </div>

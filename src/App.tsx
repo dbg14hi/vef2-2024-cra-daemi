@@ -9,6 +9,7 @@ import { Leikir } from "./pages/Leikir";
 import { Leik } from "./pages/Leik";
 import { Teams } from "./pages/Teams";
 import { Team } from "./pages/Team";
+import { CreateTeam } from "./pages/CreateTeam";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="teams/:id" element={<Team  />} />
           <Route path="leikir" element={<Leikir  />} />
           <Route path="leik/:id" element={<Leik  />} />
+          <Route path="createTeam" element={<CreateTeam  />} />
           <Route path="experiment" element={<Experiment />} />
           <Route path="*" element={<NotFound />} />
         </Route>
