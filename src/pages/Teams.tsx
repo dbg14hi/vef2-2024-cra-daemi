@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Team } from "../types";
 
-async function sleep(n: number) {
-  return new Promise((resolve, reject) => {
-    window.setTimeout(() => {resolve(null)}, n)
-  })
-}
 
 export function Teams() {
   const [teams, setTeams] = useState<Array<Team>>([{name: 'test', id: 1}])
